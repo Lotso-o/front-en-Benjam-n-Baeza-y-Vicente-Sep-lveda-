@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación Front-End | CineApp</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Archivo CSS Personalizado -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-5 fw-bold text-primary">🎬 Sistema de Películas</h1>
+        <p class="text-muted">Gestión de vistas y favoritas</p>
+    </header>
+
+    <div class="row g-4">
+        <!-- Columna del Formulario (Registro) -->
+        <div class="col-md-4">
+            <div class="card shadow border-0">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">Nueva Película</h5>
+                    <form id="formPelicula">
+                        <div class="mb-3">
+                            <label class="form-label">Nombre de la película *</label>
+                            <input type="text" id="titulo" class="form-control" placeholder="Ej: Batman">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Género</label>
+                            <select id="genero" class="form-select">
+                                <option value="Acción">Acción</option>
+                                <option value="Comedia">Comedia</option>
+                                <option value="Drama">Drama</option>
+                                <option value="Terror">Terror</option>
+                                <option value="Ciencia Ficción">Ciencia Ficción</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Puntaje (1-10) *</label>
+                            <input type="number" id="puntaje" class="form-control" min="1" max="10">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Comentarios</label>
+                            <textarea id="comentario" class="form-control" rows="2" placeholder="Opcional"></textarea>
+                        </div>
+                        <div class="form-check mb-4">
+                            <input type="checkbox" id="favorita" class="form-check-input">
+                            <label class="form-check-label">Marcar como Favorita</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100 fw-bold">GUARDAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Columna de Resultados -->
+        <div class="col-md-8">
+            <div class="d-flex flex-wrap justify-content-between align-items-center mb-3">
+                <h4 class="mb-0">Mi Listado</h4>
+                <div class="d-flex gap-2">
+                    <select id="filtroGenero" class="form-select form-select-sm" style="width: auto;">
+                        <option value="Todos">Todos los géneros</option>
+                        <option value="Acción">Acción</option>
+                        <option value="Comedia">Comedia</option>
+                        <option value="Drama">Drama</option>
+                        <option value="Terror">Terror</option>
+                        <option value="Ciencia Ficción">Ciencia Ficción</option>
+                    </select>
+                    <button id="btnVerFavoritas" class="btn btn-danger btn-sm text-nowrap">Ver Favoritas ❤️</button>
+                    <button id="btnLimpiarFiltro" class="btn btn-outline-secondary btn-sm">Ver Todas</button>
+                </div>
+            </div>
+
+            <!-- Contenedor dinámico de JS -->
+            <div id="contenedorPeliculas" class="row row-cols-1 row-cols-lg-2 g-3">
+                <!-- Las tarjetas aparecerán aquí -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Archivo JavaScript -->
+<script src="app.js"></script>
+</body>
+</html>
