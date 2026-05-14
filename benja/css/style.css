@@ -1,0 +1,229 @@
+body{
+    background: linear-gradient(135deg,#1e293b,#334155);
+    min-height:100vh;
+    color:white;
+    font-family: Arial, sans-serif;
+}
+
+
+/* ANIMACIÓN DE ENTRADA */
+main{
+    animation: fadeIn 0.7s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform: translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+
+/* HEADER */
+.header-custom{
+    background:#0f172a;
+    color:white;
+    padding:20px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 4px 10px rgba(0,0,0,0.4);
+}
+
+
+/* BOTÓN HAMBURGUESA */
+.menu-btn{
+    background:#facc15;
+    border:none;
+    font-size:28px;
+    padding:8px 16px;
+    border-radius:10px;
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover{
+    transform: scale(1.1) rotate(5deg);
+    background:#fde047;
+}
+
+
+/* MENÚ */
+.menu{
+    background:#0f172a;
+    padding:15px;
+    border-bottom:2px solid #facc15;
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+.menu button{
+    display:block;
+    width:100%;
+    margin:8px 0;
+    padding:12px;
+    border:none;
+    border-radius:8px;
+    background:#334155;
+    color:white;
+    transition: all 0.3s ease;
+}
+
+.menu button:hover{
+    background:#475569;
+    transform: translateX(8px);
+}
+
+
+/* OCULTAR */
+.oculto{
+    display:none;
+}
+
+
+/* FORMULARIO */
+.form-card{
+    background:white;
+    color:black;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.form-card:hover{
+    transform: translateY(-3px);
+}
+
+
+/* INPUTS */
+.form-control,
+.form-select{
+    transition: all 0.3s ease;
+}
+
+.form-control:focus,
+.form-select:focus{
+    transform: scale(1.02);
+    box-shadow:0 0 10px rgba(59,130,246,0.5);
+}
+
+
+/* BOTÓN GUARDAR */
+.btn-success{
+    font-weight:bold;
+    font-size:18px;
+    transition: all 0.3s ease;
+}
+
+.btn-success:hover{
+    transform: scale(1.03);
+}
+
+
+/* CARDS DE PELÍCULAS */
+.pelicula-card{
+    background:white;
+    color:black;
+    border-radius:20px;
+    transition: all 0.35s ease;
+    animation: cardAppear 0.5s ease;
+}
+
+@keyframes cardAppear{
+    from{
+        opacity:0;
+        transform: scale(0.9);
+    }
+    to{
+        opacity:1;
+        transform: scale(1);
+    }
+}
+
+.pelicula-card:hover{
+    transform: translateY(-8px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.35);
+}
+
+
+/* BOTÓN ELIMINAR */
+.btn-danger{
+    transition:0.3s;
+}
+
+.btn-danger:hover{
+    transform: scale(1.08);
+}
+
+
+/* CONTACTO */
+.contacto-card{
+    background:white;
+    color:black;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+    animation: fadeIn 0.6s ease;
+}
+
+
+/* TITULOS */
+h2{
+    margin-bottom:20px;
+}
+
+/* FOOTER */
+.footer-custom{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:3px solid #facc15;
+    width:100%;
+    font-size:16px;
+}
+
+
+/* hace que el footer quede abajo */
+body{
+    display:flex;
+    flex-direction:column;
+}
+
+main{
+    flex:1;
+}
+
+.footer-custom{
+    background:#0f172a;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+    border-top:3px solid #facc15;
+    width:100%;
+}
+
+body{
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+main{
+    flex:1;
+}
